@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Section from "@/components/Section";
 import { getAllPosts, getPostContent } from "@/utils/posts";
+import MermaidRenderer from "@/components/MermaidRenderer";
 
 export async function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -18,6 +19,7 @@ export default async function BlogPost({
 
   return (
     <Section eyebrow="Blog" title={post.title} description={post.excerpt}>
+      <MermaidRenderer />
       <article
         className="prose prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: html }}
