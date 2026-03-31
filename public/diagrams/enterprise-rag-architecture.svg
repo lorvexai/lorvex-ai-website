@@ -1,36 +1,75 @@
-﻿<svg width="1280" height="760" viewBox="0 0 1280 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise RAG End-to-End Architecture">
-<defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1F3A"/><stop offset="100%" stop-color="#102B4A"/></linearGradient>
-  <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#74C8FF"/></marker>
-  <style>
-    .t{font:700 34px 'Segoe UI',Arial,sans-serif;fill:#EAF4FF}.s{font:500 16px 'Segoe UI',Arial,sans-serif;fill:#CDE4FB}
-    .h{font:700 17px 'Segoe UI',Arial,sans-serif;fill:#ECF7FF}.b{font:500 13px 'Segoe UI',Arial,sans-serif;fill:#D6EAFE}
-  </style>
-</defs>
-<rect width="1280" height="760" fill="url(#bg)"/>
-<text class="t" x="44" y="56">Enterprise RAG Architecture</text>
-<text class="s" x="44" y="82">Written for: Technology, Finance, Healthcare, and NHS architecture teams</text>
+﻿<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise RAG architecture infographic">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A43B6"/>
+      <stop offset="100%" stop-color="#0A2E89"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9BE7FF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#56AEFF" stop-opacity="0.95"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D2F1FF"/>
+    </marker>
+    <style>
+      .title{font:700 120px 'Segoe UI',Arial,sans-serif;fill:url(#glow);letter-spacing:2px}
+      .sub{font:500 28px 'Segoe UI',Arial,sans-serif;fill:#CBE7FF}
+      .nodeLabel{font:700 56px 'Segoe UI',Arial,sans-serif;fill:#F1FAFF}
+      .small{font:500 24px 'Segoe UI',Arial,sans-serif;fill:#BFDFFF}
+      .flow{font:600 18px 'Segoe UI',Arial,sans-serif;fill:#CFEAFF}
+    </style>
+  </defs>
 
-<rect x="44" y="120" width="260" height="250" rx="16" fill="#12365E" stroke="#67B5F0"/>
-<text class="h" x="62" y="150">Knowledge Supply</text><text class="b" x="62" y="176">- Structured + unstructured data</text><text class="b" x="62" y="198">- Chunking and metadata</text><text class="b" x="62" y="220">- Embeddings + graph links</text><text class="b" x="62" y="242">- Policy tags at ingest</text>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <circle cx="130" cy="790" r="260" fill="#6EC6FF" opacity="0.18"/>
+  <circle cx="1260" cy="120" r="220" fill="#49A8FF" opacity="0.15"/>
 
-<rect x="354" y="120" width="260" height="250" rx="16" fill="#153F36" stroke="#57D7B4"/>
-<text class="h" x="372" y="150">Retrieval Intelligence</text><text class="b" x="372" y="176">- Query rewrite + routing</text><text class="b" x="372" y="198">- Hybrid recall (BM25+dense)</text><text class="b" x="372" y="220">- Reranking and compression</text><text class="b" x="372" y="242">- ACL and policy filtering</text>
+  <text class="title" x="560" y="150">RAG</text>
+  <text class="sub" x="430" y="195">Enterprise Retrieval-Augmented Generation Flow</text>
 
-<rect x="664" y="120" width="260" height="250" rx="16" fill="#57401B" stroke="#F2BC73"/>
-<text class="h" x="682" y="150">Generation Layer</text><text class="b" x="682" y="176">- Prompt assembly</text><text class="b" x="682" y="198">- LLM response generation</text><text class="b" x="682" y="220">- Structured outputs + citations</text><text class="b" x="682" y="242">- Confidence scoring</text>
+  <rect x="100" y="220" width="1200" height="620" rx="40" fill="#0B2B89" stroke="#5FB8FF" stroke-width="18" stroke-dasharray="8 14"/>
 
-<rect x="974" y="120" width="260" height="250" rx="16" fill="#5A2538" stroke="#FF90B6"/>
-<text class="h" x="992" y="150">Trust and Ops</text><text class="b" x="992" y="176">- Guardrails and red-team checks</text><text class="b" x="992" y="198">- Offline + online evaluation</text><text class="b" x="992" y="220">- Monitoring, cost, drift</text><text class="b" x="992" y="242">- Feedback to orchestration</text>
+  <circle cx="290" cy="450" r="95" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <circle cx="290" cy="420" r="20" fill="#F3FAFF"/>
+  <rect x="255" y="445" width="70" height="40" rx="20" fill="#F3FAFF"/>
+  <text class="nodeLabel" x="220" y="580">Client</text>
 
-<path d="M305 245 L350 245" stroke="#74C8FF" stroke-width="3" marker-end="url(#arr)"/>
-<path d="M615 245 L660 245" stroke="#74C8FF" stroke-width="3" marker-end="url(#arr)"/>
-<path d="M925 245 L970 245" stroke="#74C8FF" stroke-width="3" marker-end="url(#arr)"/>
+  <circle cx="700" cy="450" r="95" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <rect x="665" y="418" width="70" height="64" rx="10" fill="none" stroke="#F3FAFF" stroke-width="4"/>
+  <text x="690" y="460" font-size="38" font-family="Segoe UI" fill="#F3FAFF">AI</text>
+  <text class="nodeLabel" x="594" y="580">Framework</text>
 
-<rect x="220" y="430" width="840" height="240" rx="18" fill="#0E2745" stroke="#2D649D"/>
-<text class="h" x="250" y="464">Cross-Industry Outcomes</text>
-<text class="b" x="250" y="494">Finance: faster policy retrieval, audit-ready responses, lower compliance risk.</text>
-<text class="b" x="250" y="516">Healthcare: evidence-grounded answers with temporal and safety-aware retrieval.</text>
-<text class="b" x="250" y="538">NHS: safer pathway/triage support with explicit escalation and governance logs.</text>
-<text class="b" x="250" y="572">Operating model: AI retrieves and drafts; humans approve high-impact actions.</text>
+  <circle cx="1110" cy="450" r="95" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <path d="M1077 432 C1060 404,1110 390,1130 422 C1150 390,1190 406,1173 434 C1188 454,1178 477,1148 473 C1131 490,1096 490,1080 473 C1050 476,1042 452,1059 435 Z" fill="#F3FAFF"/>
+  <line x1="1110" y1="415" x2="1110" y2="475" stroke="#041A62" stroke-width="3"/>
+  <line x1="1090" y1="440" x2="1110" y2="440" stroke="#041A62" stroke-width="3"/>
+  <line x1="1110" y1="455" x2="1135" y2="455" stroke="#041A62" stroke-width="3"/>
+  <text class="nodeLabel" x="1065" y="580">LLM</text>
+
+  <circle cx="700" cy="690" r="85" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <ellipse cx="700" cy="675" rx="30" ry="10" fill="#F3FAFF"/>
+  <ellipse cx="700" cy="695" rx="30" ry="10" fill="#F3FAFF"/>
+  <ellipse cx="700" cy="715" rx="30" ry="10" fill="#F3FAFF"/>
+  <text x="560" y="805" class="nodeLabel" font-size="44">Vector Database</text>
+
+  <text class="small" x="995" y="770">Content (Original + New)</text>
+  <rect x="1088" y="640" width="36" height="36" rx="18" fill="#041A62" stroke="#8ED8FF" stroke-width="3"/>
+  <rect x="1138" y="640" width="36" height="36" rx="18" fill="#041A62" stroke="#8ED8FF" stroke-width="3"/>
+  <rect x="1088" y="690" width="36" height="36" rx="18" fill="#041A62" stroke="#8ED8FF" stroke-width="3"/>
+  <rect x="1138" y="690" width="36" height="36" rx="18" fill="#041A62" stroke="#8ED8FF" stroke-width="3"/>
+
+  <path d="M390 405 L610 405" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M610 495 L390 495" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M790 495 L1015 495" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1015 405 L790 405" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M700 548 L700 603" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M760 690 L960 690" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M640 690 L560 690" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text class="flow" x="505" y="390">Question</text>
+  <text class="flow" x="500" y="525">Response</text>
+  <text class="flow" x="835" y="390">Prompt</text>
+  <text class="flow" x="835" y="525">Post Processing</text>
+  <text class="flow" x="540" y="645">Semantic Search</text>
+  <text class="flow" x="740" y="645">Contextual Data</text>
 </svg>

@@ -1,10 +1,39 @@
-﻿<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentic AI system blueprint">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1F3A"/><stop offset="100%" stop-color="#0E2B49"/></linearGradient><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#74C8FF"/></marker><style>.t{font:700 33px 'Segoe UI';fill:#EAF4FF}.s{font:500 16px 'Segoe UI';fill:#CEE4FB}.h{font:700 16px 'Segoe UI';fill:#ECF7FF}.b{font:500 13px 'Segoe UI';fill:#D6EAFE}</style></defs>
-<rect width="1280" height="720" fill="url(#bg)"/>
-<text class="t" x="40" y="56">Agentic AI System Blueprint</text><text class="s" x="40" y="82">Written for: Technology and Finance operations leaders</text>
-<rect x="50" y="130" width="270" height="220" rx="16" fill="#12365E" stroke="#67B5F0"/><text class="h" x="70" y="160">Intent + Control</text><text class="b" x="70" y="186">- Goal intake</text><text class="b" x="70" y="208">- Policy/permission gate</text><text class="b" x="70" y="230">- Planner + task graph</text><text class="b" x="70" y="252">- Risk-tier routing</text>
-<rect x="360" y="130" width="350" height="220" rx="16" fill="#15473B" stroke="#57D7B4"/><text class="h" x="380" y="160">Execution Layer</text><text class="b" x="380" y="186">- Specialist agents (domain roles)</text><text class="b" x="380" y="208">- Tool/API orchestration</text><text class="b" x="380" y="230">- Shared memory and context sync</text><text class="b" x="380" y="252">- Retry and fallback logic</text>
-<rect x="750" y="130" width="470" height="220" rx="16" fill="#5A2538" stroke="#FF90B6"/><text class="h" x="770" y="160">Quality + Governance</text><text class="b" x="770" y="186">- Verifier and constraint checker</text><text class="b" x="770" y="208">- Human escalation for low confidence</text><text class="b" x="770" y="230">- Telemetry, cost, and policy evidence</text><text class="b" x="770" y="252">- Closed-loop improvement</text>
-<path d="M320 240 L355 240" stroke="#74C8FF" stroke-width="3" marker-end="url(#ar)"/><path d="M710 240 L745 240" stroke="#74C8FF" stroke-width="3" marker-end="url(#ar)"/>
-<rect x="170" y="410" width="940" height="240" rx="16" fill="#0D2746" stroke="#2D649D"/><text class="h" x="200" y="445">Functional Outcomes</text><text class="b" x="200" y="472">Finance: close-cycle assistants, anomaly triage, policy-safe recommendations.</text><text class="b" x="200" y="496">Technology: autonomous incident analysis, release ops, internal support workflows.</text><text class="b" x="200" y="520">Control model: AI executes low-risk actions; humans approve high-impact decisions.</text>
+﻿<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentic AI architecture infographic">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0A43B6"/><stop offset="100%" stop-color="#0A2E89"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D2F1FF"/></marker>
+    <style>.title{font:700 92px 'Segoe UI';fill:#D9F2FF}.sub{font:500 26px 'Segoe UI';fill:#CBE7FF}.lbl{font:700 46px 'Segoe UI';fill:#F1FAFF}.flow{font:600 20px 'Segoe UI';fill:#D4EBFF}</style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <text class="title" x="350" y="130">AGENTIC AI</text>
+  <text class="sub" x="370" y="168">From goals to reliable outcomes through controlled autonomy</text>
+
+  <rect x="90" y="220" width="1220" height="620" rx="40" fill="#0B2B89" stroke="#5FB8FF" stroke-width="18" stroke-dasharray="8 14"/>
+
+  <circle cx="300" cy="440" r="100" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <text class="lbl" x="230" y="595">User Goal</text>
+
+  <circle cx="700" cy="440" r="100" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <rect x="662" y="402" width="76" height="76" rx="12" fill="none" stroke="#F3FAFF" stroke-width="4"/>
+  <text x="690" y="452" font-size="40" font-family="Segoe UI" fill="#F3FAFF">AI</text>
+  <text class="lbl" x="602" y="595">Orchestrator</text>
+
+  <circle cx="1100" cy="440" r="100" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <path d="M1068 420 h64 v18 h-64 z M1068 450 h64 v18 h-64 z" fill="#F3FAFF"/>
+  <text class="lbl" x="1038" y="595">Execution</text>
+
+  <circle cx="700" cy="700" r="92" fill="#041A62" stroke="#8ED8FF" stroke-width="4"/>
+  <path d="M670 706 q30-36 60 0" stroke="#F3FAFF" stroke-width="4" fill="none"/>
+  <circle cx="700" cy="680" r="12" fill="#F3FAFF"/>
+  <text class="lbl" x="590" y="822" font-size="40">Human Governance</text>
+
+  <path d="M404 415 L592 415" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M808 465 L995 465" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M700 542 L700 605" stroke="#D2F1FF" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M620 690 L470 690 L470 500" stroke="#D2F1FF" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <text class="flow" x="470" y="400">Goal + context</text>
+  <text class="flow" x="870" y="500">Action plan</text>
+  <text class="flow" x="740" y="578">Approval gate</text>
+  <text class="flow" x="500" y="675">Policy feedback</text>
 </svg>
