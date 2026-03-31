@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repo = "lorvex-ai-website";
+const repo = "lorvexai";
 
 const nextConfig = {
   reactStrictMode: true,
