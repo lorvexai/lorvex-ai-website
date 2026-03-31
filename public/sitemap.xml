@@ -1,21 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://lorvex.ai/</loc>
-  </url>
-  <url>
-    <loc>https://lorvex.ai/about</loc>
-  </url>
-  <url>
-    <loc>https://lorvex.ai/services</loc>
-  </url>
-  <url>
-    <loc>https://lorvex.ai/blog</loc>
-  </url>
-  <url>
-    <loc>https://lorvex.ai/research</loc>
-  </url>
-  <url>
-    <loc>https://lorvex.ai/contact</loc>
-  </url>
+  <url><loc>https://lorvexai.github.io/lorvexai/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/about/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/services/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/capabilities/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/ai-agents-in-banking-operations/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/enterprise-rag-architectures/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/the-rise-of-agentic-ai/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/ai-native-treasury-control-tower/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/ai-in-financial-risk-management/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/nhs-ai-triage-without-harm/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/blog/nhs-waiting-lists-to-smart-pathways/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/research/</loc></url>
+  <url><loc>https://lorvexai.github.io/lorvexai/contact/</loc></url>
 </urlset>

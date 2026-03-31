@@ -4,6 +4,9 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://lorvexai.github.io/lorvexai";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -17,7 +20,7 @@ const space = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lorvex.ai"),
+  metadataBase: new URL(siteUrl),
   title: "Lorvex AI | AI Consulting & LLM Engineering",
   description:
     "Lorvex AI delivers enterprise AI systems, LLM engineering, and agentic platforms for high-impact decision automation.",
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
     title: "Lorvex AI | AI Consulting & LLM Engineering",
     description:
       "AI consulting, LLM engineering, and agentic AI systems for enterprise transformation.",
-    url: "https://lorvex.ai",
+    url: siteUrl,
     siteName: "Lorvex AI",
     images: ["/og.svg"],
     locale: "en_GB",

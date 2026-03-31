@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://lorvex.ai/sitemap.xml
+Sitemap: https://lorvexai.github.io/lorvexai/sitemap.xml
