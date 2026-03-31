@@ -3,6 +3,7 @@ import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import CTA from "@/components/CTA";
 import BlogCard from "@/components/BlogCard";
+import Link from "next/link";
 import { getAllPosts } from "@/utils/posts";
 import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 import DeliveryFrameworkDiagram from "@/components/DeliveryFrameworkDiagram";
@@ -56,11 +57,19 @@ export default function HomePage() {
       <Section
         eyebrow="Architecture"
         title="AI Capabilities"
-        description="A scalable architecture that connects enterprise data, LLMs, and governance controls."
+        description="A production capability model that aligns architecture, delivery, and governance across the AI lifecycle."
       >
+        <div className="mb-6 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-sm text-secondary/80">
+          We design capability systems, not isolated pilots: data and retrieval foundations, model and agent execution, and trust controls that remain stable under scale.
+        </div>
         <div className="grid gap-6 md:grid-cols-2">
           <ArchitectureDiagram />
           <DeliveryFrameworkDiagram />
+        </div>
+        <div className="mt-6">
+          <Link href="/capabilities" className="btn-outline text-sm">
+            Explore Full Capability Model
+          </Link>
         </div>
       </Section>
       <Section
