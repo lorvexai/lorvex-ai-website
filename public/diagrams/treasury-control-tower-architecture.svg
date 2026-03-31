@@ -1,0 +1,84 @@
+﻿<svg width="1400" height="860" viewBox="0 0 1400 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Native Treasury Control Tower Architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#0F2A4A"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#13365E"/>
+      <stop offset="100%" stop-color="#112F52"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#08162B" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7EC7FF"/>
+    </marker>
+    <style>
+      .title { font: 700 42px 'Segoe UI', Arial, sans-serif; fill: #E8F3FF; }
+      .subtitle { font: 500 20px 'Segoe UI', Arial, sans-serif; fill: #B9D9F8; }
+      .label { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #EAF5FF; }
+      .text { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #CDE3FA; }
+      .chip { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #DFF6FF; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="860" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="140" fill="#1B4D82" opacity="0.22"/>
+  <circle cx="1260" cy="740" r="180" fill="#2F80ED" opacity="0.18"/>
+
+  <text class="title" x="70" y="75">AI-Native Treasury Control Tower</text>
+  <text class="subtitle" x="70" y="108">Real-time liquidity, risk, and decisioning architecture</text>
+
+  <rect x="70" y="150" rx="18" ry="18" width="260" height="520" fill="url(#panel)" stroke="#5EA9E8" stroke-width="2" filter="url(#soft)"/>
+  <text class="label" x="95" y="188">Data Fabric</text>
+  <text class="text" x="95" y="225">- Cash positions</text>
+  <text class="text" x="95" y="252">- Payments flows</text>
+  <text class="text" x="95" y="279">- Market rates/FX</text>
+  <text class="text" x="95" y="306">- Counterparty limits</text>
+  <text class="text" x="95" y="333">- ERP and TMS events</text>
+  <rect x="95" y="375" rx="10" ry="10" width="210" height="34" fill="#114A76"/>
+  <text class="chip" x="110" y="398">Stream + Batch Ingestion</text>
+  <rect x="95" y="420" rx="10" ry="10" width="210" height="34" fill="#114A76"/>
+  <text class="chip" x="110" y="443">Data Quality Controls</text>
+
+  <rect x="395" y="150" rx="18" ry="18" width="300" height="520" fill="url(#panel)" stroke="#67D4B8" stroke-width="2" filter="url(#soft)"/>
+  <text class="label" x="420" y="188">AI Intelligence Layer</text>
+  <text class="text" x="420" y="225">- Intraday cash forecasting</text>
+  <text class="text" x="420" y="252">- Stress scenario engine</text>
+  <text class="text" x="420" y="279">- Anomaly detection</text>
+  <text class="text" x="420" y="306">- Explainability service</text>
+  <rect x="420" y="350" rx="10" ry="10" width="250" height="34" fill="#1D5A47"/>
+  <text class="chip" x="435" y="373">Treasury Knowledge Graph</text>
+  <rect x="420" y="395" rx="10" ry="10" width="250" height="34" fill="#1D5A47"/>
+  <text class="chip" x="435" y="418">Policy-Aware Recommendations</text>
+
+  <rect x="760" y="150" rx="18" ry="18" width="280" height="520" fill="url(#panel)" stroke="#F3B367" stroke-width="2" filter="url(#soft)"/>
+  <text class="label" x="785" y="188">Decision Hub</text>
+  <text class="text" x="785" y="225">- Liquidity actions</text>
+  <text class="text" x="785" y="252">- Funding options</text>
+  <text class="text" x="785" y="279">- Hedging proposals</text>
+  <text class="text" x="785" y="306">- Exposure balancing</text>
+  <rect x="785" y="350" rx="10" ry="10" width="230" height="34" fill="#6D4A1E"/>
+  <text class="chip" x="800" y="373">Human Approval Gates</text>
+  <rect x="785" y="395" rx="10" ry="10" width="230" height="34" fill="#6D4A1E"/>
+  <text class="chip" x="800" y="418">Execution Playbooks</text>
+
+  <rect x="1105" y="150" rx="18" ry="18" width="230" height="520" fill="url(#panel)" stroke="#FF85A9" stroke-width="2" filter="url(#soft)"/>
+  <text class="label" x="1130" y="188">Governance</text>
+  <text class="text" x="1130" y="225">- Audit trails</text>
+  <text class="text" x="1130" y="252">- Model controls</text>
+  <text class="text" x="1130" y="279">- Regulatory packs</text>
+  <text class="text" x="1130" y="306">- Policy exceptions</text>
+  <rect x="1130" y="350" rx="10" ry="10" width="180" height="34" fill="#6B2A42"/>
+  <text class="chip" x="1145" y="373">Board Reporting</text>
+
+  <path d="M330 410 L392 410" stroke="#7EC7FF" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M695 410 L757 410" stroke="#7EC7FF" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1040 410 L1102 410" stroke="#7EC7FF" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1220 670 C1220 740, 900 770, 540 770 C360 770, 280 730, 280 675" stroke="#57D4AF" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="710" rx="14" ry="14" width="1260" height="96" fill="#0D2746" stroke="#2A5F93" stroke-width="1.5"/>
+  <text class="subtitle" x="95" y="748">Outcome: faster intraday decisions, lower liquidity risk, stronger governance evidence.</text>
+  <text class="text" x="95" y="780">Design pattern: AI recommends, humans approve high-impact actions, system learns from every decision.</text>
+</svg>

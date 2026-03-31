@@ -7,6 +7,7 @@ export default function BlogPage() {
   const postsBySlug = new Map(posts.map((post) => [post.slug, post]));
 
   const rows = [
+    ["ai-native-treasury-control-tower"],
     ["enterprise-rag-architectures", "the-rise-of-agentic-ai"],
     ["ai-in-financial-risk-management"],
     ["nhs-waiting-lists-to-smart-pathways", "nhs-ai-triage-without-harm"]

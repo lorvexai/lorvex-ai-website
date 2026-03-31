@@ -1,0 +1,55 @@
+﻿<svg width="1400" height="760" viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Treasury decision loop">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#112F52"/>
+    </linearGradient>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7EC7FF"/>
+    </marker>
+    <style>
+      .title { font: 700 40px 'Segoe UI', Arial, sans-serif; fill: #E8F3FF; }
+      .node { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #F1FAFF; }
+      .sub { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #CDE3FA; }
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#bg2)"/>
+  <text class="title" x="70" y="72">Real-Time Treasury Decision Loop</text>
+
+  <rect x="90" y="150" width="220" height="120" rx="18" fill="#12385F" stroke="#6EC6FF" stroke-width="2"/>
+  <text class="node" x="125" y="196">Sense</text>
+  <text class="sub" x="125" y="224">Cash, flows, rates,</text>
+  <text class="sub" x="125" y="244">counterparty changes</text>
+
+  <rect x="390" y="150" width="220" height="120" rx="18" fill="#164238" stroke="#59D7B7" stroke-width="2"/>
+  <text class="node" x="430" y="196">Predict</text>
+  <text class="sub" x="430" y="224">Liquidity horizon,</text>
+  <text class="sub" x="430" y="244">stress outcomes</text>
+
+  <rect x="690" y="150" width="220" height="120" rx="18" fill="#5A3B16" stroke="#F3B367" stroke-width="2"/>
+  <text class="node" x="728" y="196">Decide</text>
+  <text class="sub" x="728" y="224">Funding, hedging,</text>
+  <text class="sub" x="728" y="244">limit actions</text>
+
+  <rect x="990" y="150" width="220" height="120" rx="18" fill="#5E2238" stroke="#FF8EB2" stroke-width="2"/>
+  <text class="node" x="1035" y="196">Govern</text>
+  <text class="sub" x="1035" y="224">Approvals, policy,</text>
+  <text class="sub" x="1035" y="244">audit evidence</text>
+
+  <path d="M310 210 L388 210" stroke="#7EC7FF" stroke-width="3" marker-end="url(#arrow2)"/>
+  <path d="M610 210 L688 210" stroke="#7EC7FF" stroke-width="3" marker-end="url(#arrow2)"/>
+  <path d="M910 210 L988 210" stroke="#7EC7FF" stroke-width="3" marker-end="url(#arrow2)"/>
+
+  <rect x="350" y="390" width="700" height="220" rx="22" fill="#0D2A47" stroke="#2B5D93" stroke-width="2"/>
+  <text class="node" x="390" y="438">Closed-Loop Learning</text>
+  <text class="sub" x="390" y="472">- Compare forecast vs actual cash positions</text>
+  <text class="sub" x="390" y="500">- Track decision outcomes and override reasons</text>
+  <text class="sub" x="390" y="528">- Retrain models with governance-approved change control</text>
+  <text class="sub" x="390" y="556">- Improve policy thresholds by market regime</text>
+
+  <path d="M1100 270 C1140 340, 1060 380, 970 390" stroke="#59D7B7" stroke-width="3" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M430 390 C330 370, 240 330, 190 270" stroke="#59D7B7" stroke-width="3" fill="none" marker-end="url(#arrow2)"/>
+
+  <rect x="70" y="650" rx="12" width="1260" height="70" fill="#0B243F" stroke="#234E7D" stroke-width="1.5"/>
+  <text class="sub" x="95" y="693">Operating model: machine speed for signal processing, human control for high-impact capital and risk decisions.</text>
+</svg>
