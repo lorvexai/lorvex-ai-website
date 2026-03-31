@@ -1,8 +1,19 @@
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
+import {
+  Activity,
+  Bot,
+  Compass,
+  Network,
+  ShieldCheck,
+  Sparkles,
+  TrendingUp,
+  Wrench
+} from "lucide-react";
 
 const capabilityPillars = [
   {
+    icon: Compass,
     title: "AI Strategy & Value Realization",
     summary:
       "Turn board-level ambition into a practical roadmap with measurable outcomes.",
@@ -13,6 +24,7 @@ const capabilityPillars = [
     ]
   },
   {
+    icon: Network,
     title: "Enterprise AI Architecture",
     summary:
       "Design scalable AI foundations that integrate with your existing data and controls.",
@@ -23,6 +35,7 @@ const capabilityPillars = [
     ]
   },
   {
+    icon: Wrench,
     title: "LLM Engineering",
     summary:
       "Build production-grade generative AI systems with reliability, speed, and quality controls.",
@@ -33,6 +46,7 @@ const capabilityPillars = [
     ]
   },
   {
+    icon: Bot,
     title: "Agentic AI Systems",
     summary:
       "Deploy supervised AI agents that execute workflows across enterprise tools.",
@@ -43,6 +57,7 @@ const capabilityPillars = [
     ]
   },
   {
+    icon: ShieldCheck,
     title: "AI Risk & Governance",
     summary:
       "Embed control, explainability, and compliance into delivery from day one.",
@@ -53,6 +68,7 @@ const capabilityPillars = [
     ]
   },
   {
+    icon: Sparkles,
     title: "AI Enablement & Change",
     summary:
       "Build the internal capability to scale safely beyond a single pilot.",
@@ -66,16 +82,19 @@ const capabilityPillars = [
 
 const deliveryModel = [
   {
+    icon: Activity,
     title: "1. Diagnose",
     detail:
       "We assess strategic priorities, data reality, architecture constraints, and risk exposure."
   },
   {
+    icon: Bot,
     title: "2. Deliver",
     detail:
       "We design and ship production-ready AI systems with measurable business outcomes."
   },
   {
+    icon: TrendingUp,
     title: "3. Scale",
     detail:
       "We establish governance, enable teams, and optimize performance to sustain value."
@@ -108,6 +127,9 @@ export default function ServicesPage() {
               key={pillar.title}
               className="glass rounded-2xl p-6 shadow-glow transition hover:-translate-y-1"
             >
+              <div className="mb-4 inline-flex rounded-xl border border-primary/30 bg-primary/10 p-2 text-primary">
+                <pillar.icon size={18} aria-hidden="true" />
+              </div>
               <h3 className="text-xl font-semibold text-white">{pillar.title}</h3>
               <p className="mt-3 text-sm text-secondary/80">{pillar.summary}</p>
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-secondary/70">
@@ -128,6 +150,9 @@ export default function ServicesPage() {
         <div className="grid gap-6 md:grid-cols-3">
           {deliveryModel.map((stage) => (
             <article key={stage.title} className="glass rounded-2xl p-6">
+              <div className="mb-4 inline-flex rounded-xl border border-primary/30 bg-primary/10 p-2 text-primary">
+                <stage.icon size={18} aria-hidden="true" />
+              </div>
               <h3 className="text-lg font-semibold text-white">{stage.title}</h3>
               <p className="mt-3 text-sm text-secondary/80">{stage.detail}</p>
             </article>
