@@ -27,9 +27,11 @@ const products = [
 ] as const;
 
 type ProductKey = (typeof products)[number]["key"];
+type RipView = "overview" | "architecture" | "data-flow" | "usage";
 
 export default function ProductsPage() {
   const [selected, setSelected] = useState<ProductKey>("ai-compliance-copilot");
+  const [ripView, setRipView] = useState<RipView>("overview");
 
   return (
     <>
@@ -90,21 +92,31 @@ export default function ProductsPage() {
           <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
             <div className="rounded-2xl border border-secondary/25 bg-background/35 p-6">
               <div className="flex flex-wrap gap-2">
-                <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs text-secondary">
-                  Overview
-                </span>
-                <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs text-secondary">
-                  Architecture
-                </span>
-                <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs text-secondary">
-                  Data Flow
-                </span>
-                <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs text-secondary">
-                  Usage
-                </span>
+                {[
+                  { key: "overview", label: "Overview" },
+                  { key: "architecture", label: "Architecture" },
+                  { key: "data-flow", label: "Data Flow" },
+                  { key: "usage", label: "Usage" }
+                ].map((tab) => {
+                  const isActive = ripView === tab.key;
+                  return (
+                    <button
+                      key={tab.key}
+                      type="button"
+                      onClick={() => setRipView(tab.key as RipView)}
+                      className={`rounded-full border px-3 py-1 text-xs transition ${
+                        isActive
+                          ? "border-primary/60 bg-primary/20 text-white"
+                          : "border-primary/30 bg-primary/5 text-secondary hover:border-primary/45"
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  );
+                })}
               </div>
 
-              <div className="mt-6 space-y-4 text-secondary/85">
+              <div className={`mt-6 space-y-4 text-secondary/85 ${ripView === "overview" ? "block" : "hidden"}`}>
                 <p>
                   Regulatory Intelligence Platform converts complex regulatory language into
                   structured obligations, control mappings, and evidence requirements.
@@ -136,14 +148,13 @@ export default function ProductsPage() {
                 </p>
               </div>
 
-              <div className="prose prose-invert mt-8 max-w-none">
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div className="rounded-xl border border-secondary/20 bg-background/40 p-4">
-                    <p className="mb-2 text-xs uppercase tracking-[0.22em] text-secondary/70">
-                      Architecture Diagram
-                    </p>
-                    <pre>
-                      <code className="language-mermaid">{`flowchart LR
+              <div className={`prose prose-invert mt-8 max-w-none ${ripView === "architecture" ? "block" : "hidden"}`}>
+                <div className="rounded-xl border border-secondary/20 bg-background/40 p-4">
+                  <p className="mb-2 text-xs uppercase tracking-[0.22em] text-secondary/70">
+                    Architecture Diagram
+                  </p>
+                  <pre>
+                    <code className="language-mermaid">{`flowchart LR
   A["PRA Basel 3.1 Rule Pack"] --> B["Clause + Obligation Parser"]
   B --> C["Control & Evidence Graph"]
   C --> D["Hybrid Retrieval Layer"]
@@ -151,14 +162,17 @@ export default function ProductsPage() {
   E --> F["Audit Pack + Action Tasks"]
   C --> G["Ownership + Workflow Engine"]
   G --> F`}</code>
-                    </pre>
-                  </div>
-                  <div className="rounded-xl border border-secondary/20 bg-background/40 p-4">
-                    <p className="mb-2 text-xs uppercase tracking-[0.22em] text-secondary/70">
-                      Data Flow Diagram
-                    </p>
-                    <pre>
-                      <code className="language-mermaid">{`flowchart TB
+                  </pre>
+                </div>
+              </div>
+
+              <div className={`prose prose-invert mt-8 max-w-none ${ripView === "data-flow" ? "block" : "hidden"}`}>
+                <div className="rounded-xl border border-secondary/20 bg-background/40 p-4">
+                  <p className="mb-2 text-xs uppercase tracking-[0.22em] text-secondary/70">
+                    Data Flow Diagram
+                  </p>
+                  <pre>
+                    <code className="language-mermaid">{`flowchart TB
   I["Regulations + Internal Policies + Logs"] --> J["Ingestion + Chunking"]
   J --> K["Obligation Mapping"]
   K --> L["Control Assignment"]
@@ -166,24 +180,26 @@ export default function ProductsPage() {
   M --> N["Risk Scoring"]
   N --> O["Recommendations + Exceptions"]
   O --> P["Board / Audit Reporting"]`}</code>
-                    </pre>
-                  </div>
+                  </pre>
                 </div>
-                <div className="mt-6 rounded-xl border border-secondary/20 bg-background/40 p-4">
+              </div>
+
+              <div className={`prose prose-invert mt-8 max-w-none ${ripView === "usage" ? "block" : "hidden"}`}>
+                <div className="rounded-xl border border-secondary/20 bg-background/40 p-4">
                   <p className="mb-2 text-xs uppercase tracking-[0.22em] text-secondary/70">
                     Usage Flow Diagram
                   </p>
                   <pre>
                     <code className="language-mermaid">{`sequenceDiagram
   participant R as Risk Analyst
-  participant C as Copilot
+  participant P as Platform Engine
   participant KG as Control Graph
   participant EV as Evidence Store
   participant WF as Workflow
-  R->>C: Ask Basel compliance question
-  C->>KG: Retrieve mapped obligations
-  C->>EV: Retrieve latest evidence
-  C-->>R: Grounded answer + citations
+  R->>P: Ask Basel compliance question
+  P->>KG: Retrieve mapped obligations
+  P->>EV: Retrieve latest evidence
+  P-->>R: Grounded answer + citations
   R->>WF: Open remediation task
   WF-->>R: Track closure + audit log`}</code>
                   </pre>

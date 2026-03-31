@@ -19,11 +19,53 @@ html {
 body {
   @apply bg-background text-secondary antialiased;
   font-family: var(--font-inter);
+  position: relative;
+  isolation: isolate;
   background-image:
-    radial-gradient(600px circle at 20% 10%, rgba(47, 128, 237, 0.15), transparent 40%),
-    radial-gradient(600px circle at 80% 20%, rgba(86, 163, 255, 0.18), transparent 45%),
+    radial-gradient(700px circle at 12% 8%, rgba(47, 128, 237, 0.2), transparent 42%),
+    radial-gradient(620px circle at 88% 18%, rgba(86, 163, 255, 0.16), transparent 45%),
+    radial-gradient(520px circle at 52% 95%, rgba(47, 128, 237, 0.1), transparent 48%),
     linear-gradient(180deg, #0B1F3A 0%, #09182C 100%);
   min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  opacity: 0.28;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(204, 230, 255, 0.085) 0px,
+      rgba(204, 230, 255, 0.085) 1px,
+      transparent 1px,
+      transparent 56px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(204, 230, 255, 0.075) 0px,
+      rgba(204, 230, 255, 0.075) 1px,
+      transparent 1px,
+      transparent 56px
+    );
+  mask-image: radial-gradient(75% 65% at 50% 40%, black 0%, transparent 100%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20% -8% auto -8%;
+  height: 95vh;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.28;
+  background:
+    radial-gradient(1300px 560px at 85% 0%, rgba(129, 201, 255, 0.2), transparent 62%),
+    radial-gradient(1200px 520px at 18% 12%, rgba(104, 179, 239, 0.16), transparent 60%);
+  transform: rotate(-4deg);
 }
 
 h1, h2, h3, h4, h5 {
