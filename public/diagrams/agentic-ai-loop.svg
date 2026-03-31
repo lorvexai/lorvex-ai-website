@@ -1,0 +1,13 @@
+﻿<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentic operating loop">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1F3A"/><stop offset="100%" stop-color="#102D4D"/></linearGradient><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#74C8FF"/></marker><style>.t{font:700 32px 'Segoe UI';fill:#EAF4FF}.n{font:700 16px 'Segoe UI';fill:#ECF7FF}.s{font:500 13px 'Segoe UI';fill:#D6EAFE}</style></defs>
+<rect width="1280" height="640" fill="url(#bg)"/>
+<text class="t" x="40" y="56">Agentic Reliability Loop</text>
+<rect x="80" y="140" width="170" height="90" rx="12" fill="#133B61" stroke="#6FC0F7"/><text class="n" x="125" y="174">Observe</text><text class="s" x="98" y="196">State + context</text>
+<rect x="290" y="140" width="170" height="90" rx="12" fill="#133B61" stroke="#6FC0F7"/><text class="n" x="343" y="174">Plan</text><text class="s" x="319" y="196">Task strategy</text>
+<rect x="500" y="140" width="170" height="90" rx="12" fill="#18463A" stroke="#59D7B7"/><text class="n" x="545" y="174">Act</text><text class="s" x="526" y="196">Tool execution</text>
+<rect x="710" y="140" width="170" height="90" rx="12" fill="#5A3F1B" stroke="#F2BC73"/><text class="n" x="742" y="174">Verify</text><text class="s" x="720" y="196">Quality checks</text>
+<rect x="920" y="140" width="220" height="90" rx="12" fill="#5A2538" stroke="#FF90B6"/><text class="n" x="972" y="174">Escalate/Commit</text><text class="s" x="950" y="196">Human gate + trace</text>
+<path d="M250 185 L285 185" stroke="#74C8FF" stroke-width="3" marker-end="url(#a)"/><path d="M460 185 L495 185" stroke="#74C8FF" stroke-width="3" marker-end="url(#a)"/><path d="M670 185 L705 185" stroke="#74C8FF" stroke-width="3" marker-end="url(#a)"/><path d="M880 185 L915 185" stroke="#74C8FF" stroke-width="3" marker-end="url(#a)"/>
+<path d="M1030 230 C1050 320, 860 360, 380 360 C250 360, 150 330, 120 230" stroke="#59D7B7" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<rect x="200" y="420" width="880" height="160" rx="14" fill="#0D2746" stroke="#2D649D"/><text class="s" x="235" y="460">Safety rule: if confidence low, policy conflict detected, or action impact high, force escalation.</text><text class="s" x="235" y="488">Operating target: increase task completion while maintaining bounded operational risk.</text>
+</svg>

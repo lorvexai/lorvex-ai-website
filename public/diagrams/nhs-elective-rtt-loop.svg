@@ -1,0 +1,14 @@
+﻿<svg width="1280" height="620" viewBox="0 0 1280 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NHS referral to treatment AI loop">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1F3A"/><stop offset="100%" stop-color="#0F2D4E"/></linearGradient><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#74C8FF"/></marker><style>.t{font:700 30px 'Segoe UI';fill:#EAF4FF}.n{font:700 15px 'Segoe UI';fill:#ECF7FF}.s{font:500 12px 'Segoe UI';fill:#D6EAFE}</style></defs>
+<rect width="1280" height="620" fill="url(#bg)"/>
+<text class="t" x="40" y="54">Referral-to-Treatment AI Feedback Loop</text>
+<rect x="70" y="130" width="160" height="86" rx="10" fill="#133B61" stroke="#6FC0F7"/><text class="n" x="98" y="162">Referral</text><text class="s" x="83" y="183">Received</text>
+<rect x="260" y="130" width="180" height="86" rx="10" fill="#133B61" stroke="#6FC0F7"/><text class="n" x="307" y="162">Triage</text><text class="s" x="283" y="183">Clinical validation</text>
+<rect x="470" y="130" width="180" height="86" rx="10" fill="#18463A" stroke="#59D7B7"/><text class="n" x="498" y="162">AI Priority</text><text class="s" x="497" y="183">Scoring</text>
+<rect x="680" y="130" width="180" height="86" rx="10" fill="#18463A" stroke="#59D7B7"/><text class="n" x="715" y="162">AI Slot</text><text class="s" x="702" y="183">Optimization</text>
+<rect x="890" y="130" width="170" height="86" rx="10" fill="#5A3F1B" stroke="#F2BC73"/><text class="n" x="921" y="162">Patient</text><text class="s" x="912" y="183">Confirmation</text>
+<rect x="1090" y="130" width="140" height="86" rx="10" fill="#5A2538" stroke="#FF90B6"/><text class="n" x="1118" y="162">Treat</text><text class="s" x="1104" y="183">Outcome</text>
+<path d="M230 173 L255 173" stroke="#74C8FF" stroke-width="3" marker-end="url(#ar)"/><path d="M440 173 L465 173" stroke="#74C8FF" stroke-width="3" marker-end="url(#ar)"/><path d="M650 173 L675 173" stroke="#74C8FF" stroke-width="3" marker-end="url(#ar)"/><path d="M860 173 L885 173" stroke="#74C8FF" stroke-width="3" marker-end="url(#ar)"/><path d="M1060 173 L1085 173" stroke="#74C8FF" stroke-width="3" marker-end="url(#ar)"/>
+<path d="M1160 216 C1180 290, 980 340, 620 340 C320 340, 140 300, 120 216" stroke="#59D7B7" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+<rect x="220" y="400" width="840" height="150" rx="12" fill="#0D2746" stroke="#2D649D"/><text class="s" x="250" y="438">Loop objective: reduce waits and DNA while preserving equity and clinical safety.</text><text class="s" x="250" y="462">Human gate remains mandatory for high-risk or high-impact pathway changes.</text>
+</svg>

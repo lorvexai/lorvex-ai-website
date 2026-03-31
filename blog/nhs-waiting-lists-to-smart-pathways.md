@@ -15,6 +15,13 @@ A practical AI blueprint for NHS elective recovery that improves throughput, fai
 
 ---
 
+## Article Focus
+
+- Written for: healthcare operations leaders and NHS elective recovery teams
+- Primary value: pathway throughput gains with fairness-aware, clinically governed AI
+
+---
+
 ## The Elective Recovery Challenge
 
 NHS elective services are balancing:
@@ -40,69 +47,13 @@ AI can support pathway orchestration, but it must preserve fairness, transparenc
 
 ## Elective Pathway Intelligence Architecture
 
-```mermaid
-flowchart TD
-    subgraph S1[Demand and Capacity Inputs]
-      A[Referrals and Waiting List Data]
-      B[Clinical Priority Signals]
-      C[Staff and Theatre Capacity]
-      D[DNA and Cancellation Patterns]
-    end
-
-    subgraph S2[Optimization Layer]
-      E[Patient Segmentation Engine]
-      F[Priority and Fairness Scoring]
-      G[Schedule Optimizer]
-      H[No-Show Risk Model]
-    end
-
-    subgraph S3[Operational Decision Layer]
-      I[Proposed Booking Plan]
-      J[Clinical and Operational Review]
-      K[Confirmed Pathway Actions]
-      L[Outcome and Performance Logging]
-    end
-
-    A --> E
-    B --> E
-    E --> F
-    C --> G
-    D --> H
-    F --> G
-    H --> G
-    G --> I
-    I --> J
-    J --> K
-    K --> L
-    L --> E
-
-    classDef input fill:#14354b,stroke:#6ec6ff,color:#e9f8ff,stroke-width:1px;
-    classDef optimize fill:#173b2c,stroke:#5ad8b8,color:#e9fff7,stroke-width:1px;
-    classDef ops fill:#3a2830,stroke:#ff8eb2,color:#ffeaf2,stroke-width:1px;
-
-    class A,B,C,D input;
-    class E,F,G,H optimize;
-    class I,J,K,L ops;
-```
+![NHS Elective Pathway Architecture](../../diagrams/nhs-elective-architecture.svg)
 
 ---
 
 ## Referral-to-Treatment Flow with Feedback
 
-```mermaid
-flowchart LR
-    A[Referral Received] --> B[Triage and Clinical Validation]
-    B --> C[Priority Scoring]
-    C --> D[Slot Optimization]
-    D --> E[Patient Communication and Confirmation]
-    E --> F[Treatment Event]
-    F --> G[Outcome and Utilization Capture]
-    G --> H[Model and Policy Recalibration]
-    H --> C
-
-    classDef flow fill:#16364d,stroke:#6dc9ff,color:#e7f7ff,stroke-width:1px;
-    class A,B,C,D,E,F,G,H flow;
-```
+![Referral-to-Treatment AI Loop](../../diagrams/nhs-elective-rtt-loop.svg)
 
 ---
 

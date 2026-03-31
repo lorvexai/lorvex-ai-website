@@ -14,6 +14,13 @@ Agentic AI shifts the focus from single-turn generation to autonomous systems th
 
 ---
 
+## Article Focus
+
+- Written for: technology platform leaders and finance operations teams adopting workflow automation
+- Primary value: controlled autonomy with measurable reliability and governance
+
+---
+
 ## From Copilots to Autonomous Operators
 
 Traditional assistants generate answers. Agentic systems generate outcomes.
@@ -30,41 +37,7 @@ A mature agentic stack combines:
 
 ## Agentic System Blueprint
 
-```mermaid
-flowchart TD
-    subgraph S1[Intent and Control]
-      A[User Goal] --> B[Policy and Permission Gate]
-      B --> C[Planner]
-      C --> D[Task Graph]
-    end
-
-    subgraph S2[Execution Layer]
-      D --> E[Specialist Agent 1]
-      D --> F[Specialist Agent 2]
-      D --> G[Specialist Agent 3]
-      E --> H[Tools and APIs]
-      F --> H
-      G --> H
-    end
-
-    subgraph S3[Quality and Governance]
-      H --> I[Verifier and Constraint Checker]
-      I --> J[Result Synthesizer]
-      J --> K[User Output]
-      I --> L[Human Escalation]
-      K --> M[Telemetry and Feedback]
-      L --> M
-      M --> C
-    end
-
-    classDef control fill:#17334a,stroke:#6ec6ff,color:#e9f8ff,stroke-width:1px;
-    classDef exec fill:#1a3a2c,stroke:#54d8b6,color:#e8fff7,stroke-width:1px;
-    classDef quality fill:#3a2830,stroke:#ff8eb2,color:#ffeaf2,stroke-width:1px;
-
-    class A,B,C,D control;
-    class E,F,G,H exec;
-    class I,J,K,L,M quality;
-```
+![Agentic AI Blueprint](../../diagrams/agentic-ai-blueprint.svg)
 
 ---
 
@@ -94,24 +67,7 @@ flowchart TD
 
 ## Operating Loop (How Agents Stay Reliable)
 
-```mermaid
-flowchart LR
-    A[Observe State] --> B[Plan Next Step]
-    B --> C[Execute Tool Action]
-    C --> D[Verify Result]
-    D --> E{Pass Checks?}
-    E -->|Yes| F[Commit Progress]
-    E -->|No| G[Repair Retry or Escalate]
-    G --> B
-    F --> H{Goal Completed?}
-    H -->|No| B
-    H -->|Yes| I[Deliver Outcome + Trace]
-
-    classDef loop fill:#17364d,stroke:#6bc9ff,color:#e8f7ff,stroke-width:1px;
-    classDef gate fill:#3f2a1d,stroke:#f0b06c,color:#fff2e2,stroke-width:1px;
-    class A,B,C,D,F,G,I loop;
-    class E,H gate;
-```
+![Agentic Reliability Loop](../../diagrams/agentic-ai-loop.svg)
 
 ---
 

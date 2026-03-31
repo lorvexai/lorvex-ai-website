@@ -15,6 +15,13 @@ A safety-first architecture for NHS front door triage that improves access while
 
 ---
 
+## Article Focus
+
+- Written for: NHS urgent care leaders, clinical safety teams, and healthcare digital transformation teams
+- Primary value: safe AI triage acceleration with mandatory human escalation controls
+
+---
+
 ## Why This Matters Now
 
 Front door services across the NHS face sustained pressure:
@@ -39,75 +46,13 @@ AI can help prioritize and route patients faster, but only if safety is engineer
 
 ## Reference Architecture for NHS Triage
 
-```mermaid
-flowchart TD
-    subgraph S1[Input Layer]
-      A[Patient Symptoms]
-      B[History and Comorbidities]
-      C[Vitals and Observation Data]
-      D[Service Capacity Signals]
-    end
-
-    subgraph S2[Triage Intelligence Layer]
-      E[Clinical NLP and Structuring]
-      F[Risk Stratification Model]
-      G[Red-Flag Rule Engine]
-      H[Confidence and Uncertainty Scoring]
-    end
-
-    subgraph S3[Decision and Safety Layer]
-      I[Recommended Disposition]
-      J[Mandatory Human Review Queue]
-      K[Patient-Facing Guidance]
-      L[Audit Log and Explainability Store]
-    end
-
-    A --> E
-    B --> E
-    C --> E
-    E --> F
-    E --> G
-    F --> H
-    G --> H
-    H --> I
-    H --> J
-    I --> K
-    I --> L
-    J --> L
-
-    D --> I
-
-    classDef input fill:#14354b,stroke:#6ec6ff,color:#e9f8ff,stroke-width:1px;
-    classDef intelligence fill:#173b2c,stroke:#5ad8b8,color:#e9fff7,stroke-width:1px;
-    classDef safety fill:#3a2830,stroke:#ff8eb2,color:#ffeaf2,stroke-width:1px;
-
-    class A,B,C,D input;
-    class E,F,G,H intelligence;
-    class I,J,K,L safety;
-```
+![NHS Triage Safety Architecture](../../diagrams/nhs-triage-architecture.svg)
 
 ---
 
 ## Red-Flag Escalation Logic
 
-```mermaid
-flowchart LR
-    A[Initial Assessment] --> B{Red Flag Present?}
-    B -->|Yes| C[Immediate Clinical Escalation]
-    B -->|No| D{Model Confidence High?}
-    D -->|No| E[Human Review]
-    D -->|Yes| F[AI-Assisted Disposition]
-    C --> G[Senior Clinical Decision]
-    E --> G
-    F --> H[Advice and Safety Netting]
-    G --> H
-    H --> I[Follow-up Monitoring]
-
-    classDef decision fill:#3d2a1c,stroke:#f2b46f,color:#fff2e4,stroke-width:1px;
-    classDef flow fill:#16364d,stroke:#6dc9ff,color:#e7f7ff,stroke-width:1px;
-    class B,D decision;
-    class A,C,E,F,G,H,I flow;
-```
+![Red-Flag Escalation and Human Oversight](../../diagrams/nhs-triage-escalation.svg)
 
 ---
 
