@@ -27,48 +27,7 @@ In financial services, every recommendation can affect capital allocation, liqui
 
 ## Risk Intelligence Architecture
 
-```mermaid
-flowchart TD
-    subgraph S1[Data Foundation]
-      A[Market Data]
-      B[Core Banking Data]
-      C[Customer and Exposure Data]
-      D[Regulatory Rules and Policies]
-      A --> E[Data Quality and Reconciliation]
-      B --> E
-      C --> E
-      D --> F[Policy Knowledge Base]
-      E --> G[Feature Store]
-    end
-
-    subgraph S2[Risk Analytics and AI]
-      G --> H[Scenario Generation Models]
-      G --> I[Early Warning Models]
-      G --> J[Anomaly and Fraud Models]
-      F --> K[Policy-Aware Decision Engine]
-      H --> K
-      I --> K
-      J --> K
-    end
-
-    subgraph S3[Controls and Reporting]
-      K --> L[Explainability and Attribution]
-      L --> M[Human Risk Review]
-      M --> N[Decision and Action]
-      N --> O[Regulatory Reporting]
-      N --> P[Portfolio Controls]
-      N --> Q[Monitoring and Drift Detection]
-      Q --> K
-    end
-
-    classDef foundation fill:#14354b,stroke:#6ec6ff,color:#e9f8ff,stroke-width:1px;
-    classDef analytics fill:#173b2c,stroke:#5ad8b8,color:#e9fff7,stroke-width:1px;
-    classDef control fill:#3a2830,stroke:#ff8eb2,color:#ffeaf2,stroke-width:1px;
-
-    class A,B,C,D,E,F,G foundation;
-    class H,I,J,K analytics;
-    class L,M,N,O,P,Q control;
-```
+![Financial Risk Intelligence Architecture](../../diagrams/finance-risk-architecture.svg?v=2)
 
 ---
 
@@ -93,23 +52,7 @@ flowchart TD
 
 ## Decision Governance Flow
 
-```mermaid
-flowchart LR
-    A[Model Output] --> B[Confidence and Policy Thresholds]
-    B --> C{Within Risk Appetite?}
-    C -->|Yes| D[Auto-Recommendation]
-    C -->|No| E[Mandatory Human Review]
-    D --> F[Decision Log and Rationale]
-    E --> F
-    F --> G[Regulatory and Audit Trace]
-    G --> H[Feedback to Model Governance]
-    H --> I[Retraining Validation Cycle]
-
-    classDef flow fill:#16364d,stroke:#6dc9ff,color:#e7f7ff,stroke-width:1px;
-    classDef decision fill:#3d2a1c,stroke:#f2b46f,color:#fff2e4,stroke-width:1px;
-    class A,B,D,E,F,G,H,I flow;
-    class C decision;
-```
+![Financial Decision Governance Flow](../../diagrams/finance-risk-governance-flow.svg?v=2)
 
 ---
 

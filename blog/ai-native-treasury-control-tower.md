@@ -41,7 +41,7 @@ Treasury teams are under pressure to make faster decisions with higher confidenc
 
 ## Reference Architecture
 
-![AI-Native Treasury Control Tower Architecture](../../diagrams/treasury-control-tower-architecture.svg)
+![AI-Native Treasury Control Tower Architecture](../../diagrams/treasury-control-tower-architecture.svg?v=2)
 
 ---
 
@@ -71,7 +71,7 @@ Treasury teams are under pressure to make faster decisions with higher confidenc
 
 ## Real-Time Decision Loop
 
-![Treasury Decision Loop](../../diagrams/treasury-decision-loop.svg)
+![Treasury Decision Loop](../../diagrams/treasury-decision-loop.svg?v=2)
 
 ---
 

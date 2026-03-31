@@ -46,13 +46,13 @@ AI can help prioritize and route patients faster, but only if safety is engineer
 
 ## Reference Architecture for NHS Triage
 
-![NHS Triage Safety Architecture](../../diagrams/nhs-triage-architecture.svg)
+![NHS Triage Safety Architecture](../../diagrams/nhs-triage-architecture.svg?v=2)
 
 ---
 
 ## Red-Flag Escalation Logic
 
-![Red-Flag Escalation and Human Oversight](../../diagrams/nhs-triage-escalation.svg)
+![Red-Flag Escalation and Human Oversight](../../diagrams/nhs-triage-escalation.svg?v=2)
 
 ---
 

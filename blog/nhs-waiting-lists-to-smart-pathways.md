@@ -47,13 +47,13 @@ AI can support pathway orchestration, but it must preserve fairness, transparenc
 
 ## Elective Pathway Intelligence Architecture
 
-![NHS Elective Pathway Architecture](../../diagrams/nhs-elective-architecture.svg)
+![NHS Elective Pathway Architecture](../../diagrams/nhs-elective-architecture.svg?v=2)
 
 ---
 
 ## Referral-to-Treatment Flow with Feedback
 
-![Referral-to-Treatment AI Loop](../../diagrams/nhs-elective-rtt-loop.svg)
+![Referral-to-Treatment AI Loop](../../diagrams/nhs-elective-rtt-loop.svg?v=2)
 
 ---
 

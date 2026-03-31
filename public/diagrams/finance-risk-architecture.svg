@@ -1,0 +1,52 @@
+﻿<svg width="1440" height="860" viewBox="0 0 1440 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Financial risk intelligence architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#09182C"/><stop offset="100%" stop-color="#12355C"/></linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#C9EBFF"/></marker>
+    <style>
+      .title{font:700 46px 'Segoe UI',Arial,sans-serif;fill:#EAF4FF}
+      .sub{font:500 19px 'Segoe UI',Arial,sans-serif;fill:#BED8F4}
+      .h{font:700 20px 'Segoe UI',Arial,sans-serif;fill:#EFF8FF}
+      .b{font:500 14px 'Segoe UI',Arial,sans-serif;fill:#D0E7FF}
+    </style>
+  </defs>
+  <rect width="1440" height="860" fill="url(#bg)"/>
+  <text class="title" x="80" y="82">AI Risk Intelligence Architecture</text>
+  <text class="sub" x="80" y="112">Governance-first model for financial risk, fraud, and regulatory decision support</text>
+
+  <rect x="80" y="150" width="1280" height="660" rx="26" fill="#0F2A4A" stroke="#3F8DD6" stroke-width="2"/>
+
+  <rect x="130" y="220" width="280" height="480" rx="18" fill="#153C64" stroke="#66B2F0"/>
+  <text class="h" x="155" y="255">Data Foundation</text>
+  <text class="b" x="155" y="285">- Market and macro data</text>
+  <text class="b" x="155" y="309">- Core banking + exposures</text>
+  <text class="b" x="155" y="333">- Customer behavior signals</text>
+  <text class="b" x="155" y="357">- Regulatory policy corpus</text>
+
+  <rect x="460" y="220" width="320" height="480" rx="18" fill="#14505D" stroke="#58C7CF"/>
+  <text class="h" x="485" y="255">AI Risk Analytics</text>
+  <text class="b" x="485" y="285">- Scenario generation models</text>
+  <text class="b" x="485" y="309">- Early warning/risk scoring</text>
+  <text class="b" x="485" y="333">- Fraud and anomaly detection</text>
+  <text class="b" x="485" y="357">- Explainability and attribution</text>
+
+  <rect x="830" y="220" width="260" height="480" rx="18" fill="#58461F" stroke="#EDB472"/>
+  <text class="h" x="855" y="255">Decision Layer</text>
+  <text class="b" x="855" y="285">- Policy-aware recommendations</text>
+  <text class="b" x="855" y="309">- Confidence thresholds</text>
+  <text class="b" x="855" y="333">- Human review routing</text>
+  <text class="b" x="855" y="357">- Action prioritization</text>
+
+  <rect x="1140" y="220" width="170" height="480" rx="18" fill="#4D2938" stroke="#FF8FB2"/>
+  <text class="h" x="1162" y="255">Controls</text>
+  <text class="b" x="1162" y="285">- Audit trace</text>
+  <text class="b" x="1162" y="309">- Governance</text>
+  <text class="b" x="1162" y="333">- Reporting</text>
+  <text class="b" x="1162" y="357">- Drift alerts</text>
+
+  <path d="M410 460 L455 460" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M780 460 L825 460" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M1090 460 L1135 460" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M1225 700 C1225 760, 640 770, 640 700" stroke="#59D7B7" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <text class="b" x="540" y="790">Outcome: faster risk decisions, lower false positives, and stronger regulator-ready evidence.</text>
+</svg>
