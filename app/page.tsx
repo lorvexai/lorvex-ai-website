@@ -75,7 +75,6 @@ export default function HomePage() {
               slug={post.slug}
               title={post.title}
               excerpt={post.excerpt}
-              date={post.date}
             />
           ))}
         </div>

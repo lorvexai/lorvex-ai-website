@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Section from "@/components/Section";
 import { getAllPosts, getPostContent } from "@/utils/posts";
 import MermaidRenderer from "@/components/MermaidRenderer";
 
@@ -18,12 +17,17 @@ export default async function BlogPost({
   const html = await getPostContent(params.slug);
 
   return (
-    <Section eyebrow="Blog" title={post.title} description={post.excerpt}>
-      <MermaidRenderer />
-      <article
-        className="prose prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </Section>
+    <section className="section">
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-secondary/70">
+          Blog
+        </p>
+        <MermaidRenderer />
+        <article
+          className="prose prose-invert max-w-none"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </div>
+    </section>
   );
 }
