@@ -1,11 +1,11 @@
-﻿<svg width="1440" height="860" viewBox="0 0 1440 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise RAG retrieval pipeline premium diagram">
+﻿<svg width="1440" height="860" viewBox="0 0 1440 860" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RAG retrieval pipeline">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#09182C"/><stop offset="100%" stop-color="#12355C"/></linearGradient>
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#BFE8FF"/></marker>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#C9EBFF"/></marker>
     <style>
-      .title{font:700 44px 'Segoe UI';fill:#EAF4FF}
-      .n{font:700 18px 'Segoe UI';fill:#EFF8FF}
-      .s{font:500 14px 'Segoe UI';fill:#CFE6FF}
+      .title{font:700 44px 'Segoe UI',Arial,sans-serif;fill:#EAF4FF}
+      .n{font:700 17px 'Segoe UI',Arial,sans-serif;fill:#EFF8FF}
+      .s{font:500 14px 'Segoe UI',Arial,sans-serif;fill:#CFE6FF}
     </style>
   </defs>
   <rect width="1440" height="860" fill="url(#bg)"/>
@@ -13,26 +13,45 @@
 
   <rect x="90" y="130" width="1260" height="620" rx="26" fill="#0F2A4A" stroke="#3F8DD6" stroke-width="2"/>
 
-  <rect x="140" y="220" width="150" height="95" rx="12" fill="#153C64" stroke="#66B2F0"/><text class="n" x="176" y="255">Query</text><text class="s" x="170" y="278">User intent</text>
-  <rect x="330" y="220" width="170" height="95" rx="12" fill="#153C64" stroke="#66B2F0"/><text class="n" x="364" y="255">Rewrite</text><text class="s" x="350" y="278">Expand/route</text>
-  <rect x="540" y="220" width="190" height="95" rx="12" fill="#14505D" stroke="#58C7CF"/><text class="n" x="578" y="255">Hybrid Recall</text><text class="s" x="585" y="278">Dense + BM25</text>
-  <rect x="770" y="220" width="170" height="95" rx="12" fill="#14505D" stroke="#58C7CF"/><text class="n" x="816" y="255">Rerank</text><text class="s" x="802" y="278">Cross encoder</text>
-  <rect x="980" y="220" width="170" height="95" rx="12" fill="#58461F" stroke="#EDB472"/><text class="n" x="1010" y="255">Context Build</text><text class="s" x="1025" y="278">Token budget</text>
-  <rect x="1190" y="220" width="120" height="95" rx="12" fill="#58461F" stroke="#EDB472"/><text class="n" x="1225" y="255">Answer</text><text class="s" x="1218" y="278">Citations</text>
+  <g>
+    <rect x="140" y="220" width="150" height="95" rx="12" fill="#153C64" stroke="#66B2F0"/>
+    <text class="n" x="215" y="255" text-anchor="middle">Query</text>
+    <text class="s" x="215" y="278" text-anchor="middle">User intent</text>
 
-  <path d="M290 268 L325 268" stroke="#BFE8FF" stroke-width="3" marker-end="url(#arr)"/>
-  <path d="M500 268 L535 268" stroke="#BFE8FF" stroke-width="3" marker-end="url(#arr)"/>
-  <path d="M730 268 L765 268" stroke="#BFE8FF" stroke-width="3" marker-end="url(#arr)"/>
-  <path d="M940 268 L975 268" stroke="#BFE8FF" stroke-width="3" marker-end="url(#arr)"/>
-  <path d="M1150 268 L1185 268" stroke="#BFE8FF" stroke-width="3" marker-end="url(#arr)"/>
+    <rect x="330" y="220" width="170" height="95" rx="12" fill="#153C64" stroke="#66B2F0"/>
+    <text class="n" x="415" y="255" text-anchor="middle">Rewrite</text>
+    <text class="s" x="415" y="278" text-anchor="middle">Expand and route</text>
+
+    <rect x="540" y="220" width="190" height="95" rx="12" fill="#14505D" stroke="#58C7CF"/>
+    <text class="n" x="635" y="255" text-anchor="middle">Hybrid Recall</text>
+    <text class="s" x="635" y="278" text-anchor="middle">Dense + BM25</text>
+
+    <rect x="770" y="220" width="170" height="95" rx="12" fill="#14505D" stroke="#58C7CF"/>
+    <text class="n" x="855" y="255" text-anchor="middle">Rerank</text>
+    <text class="s" x="855" y="278" text-anchor="middle">Cross-encoder</text>
+
+    <rect x="980" y="220" width="170" height="95" rx="12" fill="#58461F" stroke="#EDB472"/>
+    <text class="n" x="1065" y="255" text-anchor="middle">Context Build</text>
+    <text class="s" x="1065" y="278" text-anchor="middle">Token budget</text>
+
+    <rect x="1190" y="220" width="120" height="95" rx="12" fill="#58461F" stroke="#EDB472"/>
+    <text class="n" x="1250" y="255" text-anchor="middle">Answer</text>
+    <text class="s" x="1250" y="278" text-anchor="middle">Citations</text>
+  </g>
+
+  <path d="M290 268 L325 268" stroke="#C9EBFF" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M500 268 L535 268" stroke="#C9EBFF" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M730 268 L765 268" stroke="#C9EBFF" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M940 268 L975 268" stroke="#C9EBFF" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M1150 268 L1185 268" stroke="#C9EBFF" stroke-width="3" marker-end="url(#arr)"/>
 
   <rect x="250" y="410" width="940" height="260" rx="18" fill="#122F53" stroke="#4A95DA"/>
   <text class="n" x="286" y="450">Governance Gate Stack</text>
-  <text class="s" x="286" y="484">1) Groundedness scoring + attribution check</text>
+  <text class="s" x="286" y="484">1) Groundedness scoring and attribution check</text>
   <text class="s" x="286" y="512">2) Policy and sensitive-data controls</text>
-  <text class="s" x="286" y="540">3) Red-team case replay and risk review</text>
-  <text class="s" x="286" y="568">4) Canary release + online monitoring (latency, quality, cost)</text>
-  <text class="s" x="286" y="596">5) Feedback to query routing and retrieval policies</text>
+  <text class="s" x="286" y="540">3) Risk review and red-team replay</text>
+  <text class="s" x="286" y="568">4) Canary release + monitoring (latency, quality, cost)</text>
+  <text class="s" x="286" y="596">5) Feedback to query routing and retrieval policy rules</text>
 
   <path d="M1240 315 C1280 390, 1230 430, 1160 440" stroke="#59D7B7" stroke-width="3" fill="none" marker-end="url(#arr)"/>
   <path d="M320 440 C260 430, 200 390, 170 315" stroke="#59D7B7" stroke-width="3" fill="none" marker-end="url(#arr)"/>

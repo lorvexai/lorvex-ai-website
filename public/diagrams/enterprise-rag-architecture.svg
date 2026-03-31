@@ -1,20 +1,19 @@
-﻿<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise RAG architecture premium diagram">
+﻿<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enterprise RAG architecture">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#09182C"/>
-      <stop offset="55%" stop-color="#0B1F3A"/>
-      <stop offset="100%" stop-color="#12335A"/>
+      <stop offset="100%" stop-color="#12345A"/>
     </linearGradient>
-    <radialGradient id="halo" cx="50%" cy="35%" r="70%">
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
       <stop offset="0%" stop-color="#2F80ED" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#2F80ED" stop-opacity="0"/>
     </radialGradient>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M0 0 L10 5 L0 10 z" fill="#BFE8FF"/>
+      <path d="M0 0 L10 5 L0 10 z" fill="#C9EBFF"/>
     </marker>
     <style>
       .title{font:700 52px 'Segoe UI',Arial,sans-serif;fill:#EAF4FF}
-      .sub{font:500 20px 'Segoe UI',Arial,sans-serif;fill:#BFD8F4}
+      .sub{font:500 20px 'Segoe UI',Arial,sans-serif;fill:#BED8F4}
       .node{font:700 26px 'Segoe UI',Arial,sans-serif;fill:#EFF8FF}
       .meta{font:500 15px 'Segoe UI',Arial,sans-serif;fill:#CFE6FF}
       .flow{font:600 16px 'Segoe UI',Arial,sans-serif;fill:#D8EEFF}
@@ -22,55 +21,66 @@
   </defs>
 
   <rect width="1440" height="900" fill="url(#bg)"/>
-  <ellipse cx="720" cy="320" rx="620" ry="360" fill="url(#halo)"/>
+  <ellipse cx="720" cy="340" rx="620" ry="360" fill="url(#glow)"/>
 
-  <text class="title" x="80" y="86">Enterprise RAG Architecture</text>
-  <text class="sub" x="80" y="118">Finance, Healthcare, and NHS-grade retrieval, governance, and response integrity</text>
+  <text class="title" x="86" y="90">Enterprise RAG Architecture</text>
+  <text class="sub" x="86" y="122">High-trust retrieval for finance, healthcare, and NHS-grade operations</text>
 
-  <rect x="80" y="170" width="1280" height="660" rx="30" fill="#0F2A4A" stroke="#3F8DD6" stroke-width="2"/>
+  <rect x="82" y="170" width="1276" height="660" rx="30" fill="#0F2A4A" stroke="#3F8DD6" stroke-width="2"/>
 
-  <circle cx="280" cy="390" r="112" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
-  <circle cx="280" cy="355" r="22" fill="#ECF7FF"/>
-  <rect x="238" y="388" width="84" height="42" rx="21" fill="#ECF7FF"/>
-  <text class="node" x="220" y="548">Business User</text>
-  <text class="meta" x="198" y="574">Question and intent</text>
+  <g>
+    <circle cx="280" cy="390" r="110" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
+    <circle cx="280" cy="357" r="20" fill="#ECF7FF"/>
+    <rect x="242" y="388" width="76" height="38" rx="19" fill="#ECF7FF"/>
+    <text class="node" x="280" y="548" text-anchor="middle">Business User</text>
+    <text class="meta" x="280" y="574" text-anchor="middle">Question and intent</text>
+  </g>
 
-  <circle cx="720" cy="390" r="122" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
-  <rect x="672" y="340" width="96" height="92" rx="14" fill="none" stroke="#ECF7FF" stroke-width="4"/>
-  <text x="707" y="397" font-size="44" font-family="Segoe UI" fill="#ECF7FF">AI</text>
-  <text class="node" x="640" y="548">RAG Framework</text>
-  <text class="meta" x="600" y="574">Orchestration + retrieval</text>
+  <g>
+    <circle cx="720" cy="390" r="122" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
+    <rect x="675" y="344" width="90" height="88" rx="12" fill="none" stroke="#ECF7FF" stroke-width="4"/>
+    <text x="720" y="398" text-anchor="middle" font-size="42" font-family="Segoe UI" fill="#ECF7FF">AI</text>
+    <text class="node" x="720" y="548" text-anchor="middle">RAG Framework</text>
+    <text class="meta" x="720" y="574" text-anchor="middle">Retrieval orchestration</text>
+  </g>
 
-  <circle cx="1160" cy="390" r="112" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
-  <path d="M1118 372 C1100 340,1160 326,1182 358 C1204 326,1248 344,1230 374 C1248 396,1237 420,1202 416 C1184 436,1142 436,1124 416 C1090 420,1078 396,1096 374 Z" fill="#ECF7FF"/>
-  <line x1="1160" y1="350" x2="1160" y2="420" stroke="#0B1F3A" stroke-width="3"/>
-  <line x1="1138" y1="378" x2="1160" y2="378" stroke="#0B1F3A" stroke-width="3"/>
-  <line x1="1160" y1="395" x2="1190" y2="395" stroke="#0B1F3A" stroke-width="3"/>
-  <text class="node" x="1120" y="548">LLM Layer</text>
-  <text class="meta" x="1090" y="574">Draft + post-process</text>
+  <g>
+    <circle cx="1160" cy="390" r="110" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
+    <path d="M1118 372 C1102 340,1158 327,1180 358 C1202 327,1246 344,1228 374 C1246 395,1236 420,1203 416 C1185 435,1143 435,1125 416 C1092 420,1082 395,1100 374 Z" fill="#ECF7FF"/>
+    <line x1="1160" y1="351" x2="1160" y2="420" stroke="#0B1F3A" stroke-width="3"/>
+    <line x1="1138" y1="378" x2="1160" y2="378" stroke="#0B1F3A" stroke-width="3"/>
+    <line x1="1160" y1="395" x2="1190" y2="395" stroke="#0B1F3A" stroke-width="3"/>
+    <text class="node" x="1160" y="548" text-anchor="middle">LLM Layer</text>
+    <text class="meta" x="1160" y="574" text-anchor="middle">Draft and post-process</text>
+  </g>
 
-  <circle cx="720" cy="690" r="98" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
-  <ellipse cx="720" cy="666" rx="34" ry="11" fill="#ECF7FF"/>
-  <ellipse cx="720" cy="690" rx="34" ry="11" fill="#ECF7FF"/>
-  <ellipse cx="720" cy="714" rx="34" ry="11" fill="#ECF7FF"/>
-  <text class="node" x="606" y="818">Vector Knowledge Base</text>
+  <g>
+    <circle cx="720" cy="690" r="96" fill="#0B1F3A" stroke="#75C0FF" stroke-width="4"/>
+    <ellipse cx="720" cy="668" rx="33" ry="10" fill="#ECF7FF"/>
+    <ellipse cx="720" cy="690" rx="33" ry="10" fill="#ECF7FF"/>
+    <ellipse cx="720" cy="712" rx="33" ry="10" fill="#ECF7FF"/>
+    <text class="node" x="720" y="818" text-anchor="middle">Vector Knowledge Base</text>
+  </g>
 
-  <rect x="1010" y="640" width="290" height="120" rx="16" fill="#143A63" stroke="#5FA8E8"/>
-  <text class="meta" x="1034" y="678">Content Sources</text>
-  <text class="meta" x="1034" y="702">- Original enterprise data</text>
-  <text class="meta" x="1034" y="726">- New indexed knowledge</text>
+  <g>
+    <rect x="1008" y="636" width="300" height="126" rx="16" fill="#143A63" stroke="#5FA8E8"/>
+    <text class="meta" x="1028" y="668">Content Sources</text>
+    <text class="meta" x="1028" y="692">- Original enterprise content</text>
+    <text class="meta" x="1028" y="716">- Newly indexed knowledge</text>
+    <text class="meta" x="1028" y="740">- Domain-specific updates</text>
+  </g>
 
-  <path d="M400 356 L590 356" stroke="#BFE8FF" stroke-width="4" marker-end="url(#arr)"/>
-  <path d="M590 458 L400 458" stroke="#BFE8FF" stroke-width="4" marker-end="url(#arr)"/>
-  <path d="M850 458 L1042 458" stroke="#BFE8FF" stroke-width="4" marker-end="url(#arr)"/>
-  <path d="M1042 356 L850 356" stroke="#BFE8FF" stroke-width="4" marker-end="url(#arr)"/>
-  <path d="M720 512 L720 588" stroke="#BFE8FF" stroke-width="4" marker-end="url(#arr)"/>
-  <path d="M818 690 L1000 690" stroke="#BFE8FF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M402 356 L592 356" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M592 458 L402 458" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M848 458 L1040 458" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M1040 356 L848 356" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M720 514 L720 592" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
+  <path d="M818 690 L998 690" stroke="#C9EBFF" stroke-width="4" marker-end="url(#arr)"/>
 
-  <text class="flow" x="486" y="342">Question</text>
-  <text class="flow" x="486" y="488">Response</text>
+  <text class="flow" x="488" y="342">Question</text>
+  <text class="flow" x="488" y="488">Response</text>
   <text class="flow" x="914" y="342">Prompt</text>
-  <text class="flow" x="914" y="488">Post-processing</text>
-  <text class="flow" x="596" y="640">Semantic search</text>
-  <text class="flow" x="830" y="676">Context feed</text>
+  <text class="flow" x="900" y="488">Post-processing</text>
+  <text class="flow" x="590" y="642">Semantic search</text>
+  <text class="flow" x="836" y="676">Context feed</text>
 </svg>
