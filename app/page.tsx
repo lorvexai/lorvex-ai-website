@@ -4,16 +4,76 @@ import CTA from "@/components/CTA";
 import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
 import { getAllPosts } from "@/utils/posts";
-import { ArrowRight, ShieldCheck, Workflow, Database, Cpu } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Workflow,
+  Database,
+  Cpu,
+  Landmark,
+  HeartPulse,
+  Building2,
+  Factory,
+  CheckCircle2
+} from "lucide-react";
 import LiveAgentTrace from "@/components/LiveAgentTrace";
 import TechnicalInsightsHeader from "@/components/TechnicalInsightsHeader";
 
 export default function HomePage() {
   const posts = getAllPosts().slice(0, 3);
-  const sectors = ["Finance", "Healthcare", "NHS", "Enterprise"];
+  const sectors = [
+    { icon: Landmark, label: "Finance" },
+    { icon: HeartPulse, label: "Healthcare" },
+    { icon: Building2, label: "NHS" },
+    { icon: Factory, label: "Enterprise" }
+  ];
+  const outcomes = [
+    {
+      stat: "6-10 Weeks",
+      label: "Blueprint to first production pilot",
+      note: "Scoped for one business unit with clear governance gates."
+    },
+    {
+      stat: "Governance-First",
+      label: "Risk and audit controls built in",
+      note: "Evidence trails, policy checks, and explainability included."
+    },
+    {
+      stat: "Domain-Tuned",
+      label: "Finance, healthcare, and NHS-ready patterns",
+      note: "Pre-structured delivery models for regulated environments."
+    }
+  ];
+  const journey = [
+    "Discovery and use-case prioritization tied to measurable outcomes",
+    "Reference architecture with data, model, and governance layers",
+    "Pilot launch with observability, evaluation, and operating controls",
+    "Scale plan across business units with risk and compliance alignment"
+  ];
 
   return (
     <>
+      <section className="border-b border-secondary/10 bg-background/75 py-4">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="flex flex-col gap-3 rounded-2xl border border-primary/20 bg-primary/5 px-4 py-4 md:flex-row md:items-center md:justify-between">
+            <p className="text-xs uppercase tracking-[0.32em] text-secondary/70">
+              Who We Help
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {sectors.map((area) => (
+                <span
+                  key={area.label}
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-sm font-medium text-secondary"
+                >
+                  <area.icon size={14} className="text-primary" aria-hidden="true" />
+                  {area.label}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section pb-10 pt-14 md:pt-20">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="glass grid gap-8 rounded-3xl border border-primary/30 p-7 md:grid-cols-[1.15fr_0.85fr] md:p-10">
@@ -59,26 +119,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section py-8 md:py-10">
-        <div className="mx-auto w-full max-w-6xl px-6">
-          <div className="glass rounded-2xl p-5">
-            <p className="text-xs uppercase tracking-[0.32em] text-secondary/70">
-              Who We Help
-            </p>
-            <div className="mt-3 flex flex-wrap gap-3">
-              {sectors.map((area) => (
-                <span
-                  key={area}
-                  className="min-h-11 rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-sm font-medium text-secondary"
-                >
-                  {area}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Section
         eyebrow="Solutions"
         title="Enterprise solutions with operational depth"
@@ -117,6 +157,43 @@ export default function HomePage() {
           <Link href="/services" className="btn-outline min-h-11 text-sm">
             Explore Solutions Architecture
           </Link>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="Impact"
+        title="Built for outcomes, not demos"
+        description="A landing flow designed to convert high-intent teams into delivery programs."
+      >
+        <div className="grid gap-5 md:grid-cols-3">
+          {outcomes.map((item) => (
+            <div
+              key={item.label}
+              className="relative overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-[#0C1D3B] via-[#143462] to-[#1D4C8F] p-6"
+            >
+              <p className="font-mono text-xs uppercase tracking-[0.22em] text-primary/90">
+                {item.stat}
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-white">{item.label}</h3>
+              <p className="mt-3 text-sm text-secondary/85">{item.note}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 rounded-2xl border border-secondary/20 bg-background/35 p-6">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-secondary/70">
+            Delivery Journey
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            {journey.map((step) => (
+              <div
+                key={step}
+                className="flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-4"
+              >
+                <CheckCircle2 size={18} className="mt-0.5 text-primary" aria-hidden="true" />
+                <p className="text-sm text-secondary">{step}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
