@@ -57,7 +57,7 @@ A production-grade Retrieval-Augmented Generation stack is not just "LLM + vecto
 ### 5. Generation, Trust, and Evaluation
 - Structured, citation-first responses
 - Policy and safety verification before final delivery
-- Continuous evaluation harness with Ragas and TruLens metrics
+- Continuous evaluation harness with relevance, faithfulness, and context-precision metrics
 
 ---
 
@@ -87,7 +87,7 @@ flowchart LR
   ORCH --> GEN["LLM Generation"]
   GEN --> PV["Policy + Safety Verifier"]
   PV --> OUT["Cited Response"]
-  OUT --> EVAL["Ragas + TruLens Evaluation"]
+  OUT --> EVAL["Evaluation Harness"]
   EVAL --> FB["Feedback Loop"]
   FB --> PR1
   ORCH --> RET
@@ -123,8 +123,8 @@ flowchart LR
 - Failure, fallback, and escalation rates
 
 ### Evaluation Frameworks to Operationalize
-- Ragas: answer relevance, faithfulness, context precision
-- TruLens: trace-level quality and groundedness instrumentation
+- Evaluation framework 1: answer relevance, faithfulness, context precision
+- Evaluation framework 2: trace-level quality and groundedness instrumentation
 
 ---
 
@@ -132,12 +132,12 @@ flowchart LR
 
 | Option | Search Type | Best Fit | Strengths | Tradeoffs |
 | --- | --- | --- | --- | --- |
-| Pinecone | Hybrid support (keyword + vector) | Managed enterprise deployments | Fast setup, managed scaling, mature ecosystem | Higher managed cost at larger scale |
-| Weaviate | Hybrid support (keyword + vector) | Teams needing rich filtering and schema controls | Strong filter model and modular architecture | Needs careful tuning at high scale |
-| Qdrant | Hybrid support (keyword + vector) | High-performance, cost-aware production | Excellent vector performance and payload filtering | Fewer managed enterprise features out of the box |
-| Milvus | Hybrid via surrounding search stack | Large-scale self-hosted workloads | High throughput and horizontal scaling | Operational complexity if self-managed |
-| pgvector (PostgreSQL) | Hybrid via SQL + lexical patterns | Teams standardizing on Postgres | Transactional + vector in one platform | Can be costly for very large retrieval workloads |
-| OpenSearch / Azure AI Search | Native hybrid search | Existing enterprise search platform users | Familiar stack and operational integration | Relevance tuning depth varies by platform |
+| Managed vector platform | Hybrid support (keyword + vector) | Teams optimizing for speed to production | Fast setup, lower platform ops burden | Higher recurring platform cost at scale |
+| Schema-first retrieval platform | Hybrid support (keyword + vector) | Teams needing rich filtering and metadata controls | Strong retrieval governance and query controls | Requires careful index and filter tuning |
+| Performance-optimized vector engine | Hybrid support (keyword + vector) | High-throughput, cost-aware workloads | Excellent vector performance and payload filtering | Managed enterprise features vary by provider |
+| Self-hosted distributed vector stack | Hybrid via surrounding search layer | Large-scale, high-control environments | Strong horizontal scaling and control | Higher operational complexity |
+| Relational DB with vector extension | Hybrid via SQL + lexical patterns | Teams standardizing on relational data platforms | Unified transactional + vector workflows | Can become expensive for very large retrieval workloads |
+| Enterprise search platform with vector support | Native hybrid search | Teams already invested in enterprise search | Familiar stack and enterprise integration | Relevance tuning depth varies by implementation |
 
 ### Selection Heuristics
 - Treat hybrid search as mandatory for enterprise-grade retrieval quality.
@@ -205,7 +205,7 @@ Suggest treatment adjustments for a diabetic patient with declining renal functi
 2. Define ingestion contracts and metadata/ACL taxonomy
 3. Implement pre-retrieval loop + hybrid retrieval + reranker
 4. Add agentic re-search loop and policy verifier
-5. Stand up Ragas and TruLens evaluation harnesses
+5. Stand up evaluation harnesses for relevance, faithfulness, and groundedness
 6. Launch shadow testing, canary rollout, and feedback-driven tuning
 
 ---
