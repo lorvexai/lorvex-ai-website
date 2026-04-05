@@ -20,9 +20,7 @@ export default function HomePage() {
     "NHS AI Triage Without Harm",
     "AI-Native Treasury Control Tower",
     "AI in Financial Risk Management",
-    "Enterprise RAG Architectures",
-    "AI Agents in Banking Operations",
-    "The Rise of Agentic AI"
+    "AI Agents in Banking Operations"
   ]);
 
   const posts = getAllPosts()
