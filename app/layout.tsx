@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://lorvexai.github.io/lorvexai";
@@ -73,9 +74,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${mono.variable}`}>
-      <body className="relative">
+      <body className="relative pb-20 md:pb-0">
         <Header />
         <main>{children}</main>
+        <MobileStickyCTA />
         <Footer />
       </body>
     </html>

@@ -1,5 +1,4 @@
-﻿import BlogCard from "@/components/BlogCard";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { getAllPosts } from "@/utils/posts";
 import {
   ArrowRight,
@@ -13,6 +12,7 @@ import {
   Factory
 } from "lucide-react";
 import LiveAgentTrace from "@/components/LiveAgentTrace";
+import FeaturedInsights from "@/components/FeaturedInsights";
 
 export default function HomePage() {
   const hiddenHomePostTitles = new Set([
@@ -23,9 +23,7 @@ export default function HomePage() {
     "AI Agents in Banking Operations"
   ]);
 
-  const posts = getAllPosts()
-    .filter((post) => !hiddenHomePostTitles.has(post.title))
-    .slice(0, 3);
+  const posts = getAllPosts().filter((post) => !hiddenHomePostTitles.has(post.title));
 
   const sectors = [
     { icon: Landmark, label: "Finance" },
@@ -102,23 +100,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="mx-auto w-full max-w-6xl px-6">
-          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-secondary/70">
-            Featured Insights
-          </p>
-          <div className="grid gap-6 md:grid-cols-3">
-            {posts.map((post) => (
-              <BlogCard
-                key={post.slug}
-                slug={post.slug}
-                title={post.title}
-                excerpt={post.excerpt}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeaturedInsights posts={posts} />
     </>
   );
 }

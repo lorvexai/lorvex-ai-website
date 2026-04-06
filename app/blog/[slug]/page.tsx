@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { getAllPosts, getPostContent } from "@/utils/posts";
 import MermaidRenderer from "@/components/MermaidRenderer";
+import BlogCard from "@/components/BlogCard";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://lorvexai.github.io/lorvexai";
@@ -74,10 +75,24 @@ export default async function BlogPost({
 }: {
   params: { slug: string };
 }) {
-  const post = getAllPosts().find((p) => p.slug === params.slug);
+  const allPosts = getAllPosts();
+  const post = allPosts.find((p) => p.slug === params.slug);
   if (!post) return notFound();
 
   const html = await getPostContent(params.slug);
+
+  const relatedWithScores = allPosts
+    .filter((candidate) => candidate.slug !== post.slug)
+    .map((candidate) => {
+      const sharedTagCount = candidate.tags.filter((tag) => post.tags.includes(tag)).length;
+      return { ...candidate, sharedTagCount };
+    })
+    .sort((a, b) => {
+      if (b.sharedTagCount !== a.sharedTagCount) return b.sharedTagCount - a.sharedTagCount;
+      return a.publishedAt < b.publishedAt ? 1 : -1;
+    });
+
+  const relatedPosts = relatedWithScores.slice(0, 3);
 
   return (
     <section className="section">
@@ -90,8 +105,25 @@ export default async function BlogPost({
           className="prose prose-invert max-w-none"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+
+        {relatedPosts.length > 0 && (
+          <div className="mt-12 border-t border-secondary/20 pt-8">
+            <p className="mb-3 text-xs uppercase tracking-[0.25em] text-secondary/70">
+              Related Insights
+            </p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {relatedPosts.map((related) => (
+                <BlogCard
+                  key={related.slug}
+                  slug={related.slug}
+                  title={related.title}
+                  excerpt={related.excerpt}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
 }
-
