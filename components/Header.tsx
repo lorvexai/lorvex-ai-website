@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 const groups = [
   {
-    label: "Who We Help",
+    label: "Industries",
     links: [
       { href: "/industries/finance",    label: "Finance & Banking" },
       { href: "/industries/healthcare", label: "Healthcare (NHS)" },
