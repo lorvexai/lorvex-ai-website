@@ -9,14 +9,22 @@ const TOPICS = ["All", "Technology", "Finance", "Healthcare", "NHS", "Enterprise
 type Topic = (typeof TOPICS)[number];
 
 const topicBySlug: Record<string, Exclude<Topic, "All">> = {
-  "ai-agents-in-banking-operations":     "Finance",
-  "ai-native-treasury-control-tower":    "Finance",
-  "ai-in-financial-risk-management":     "Finance",
-  "nhs-ai-triage-without-harm":          "NHS",
-  "nhs-waiting-lists-to-smart-pathways": "NHS",
-  "enterprise-rag-architectures":        "Technology",
+  "ai-agents-in-banking-operations":          "Finance",
+  "ai-native-treasury-control-tower":         "Finance",
+  "ai-in-financial-risk-management":          "Finance",
+  "nhs-ai-triage-without-harm":               "NHS",
+  "nhs-waiting-lists-to-smart-pathways":      "NHS",
+  "enterprise-rag-architectures":             "Technology",
   "end-to-end-ai-risk-platform-architecture": "Technology",
-  "the-rise-of-agentic-ai":             "Technology"
+  "the-rise-of-agentic-ai":                   "Technology",
+  "agentic-ai-design-patterns":               "Technology",
+  "ai-workflows-for-regulated-enterprises":   "Enterprise",
+  "production-rag-beyond-the-basics":         "Technology",
+  "llm-evaluation-in-production":             "Enterprise",
+  "guardrails-for-enterprise-ai":             "Enterprise",
+  "fine-tuning-vs-rag-vs-prompting":          "Technology",
+  "enterprise-llm-chat-interfaces":           "Enterprise",
+  "ai-prompt-and-workflow-templates":         "Enterprise"
 };
 
 const topicAccent: Record<Exclude<Topic, "All">, string> = {

@@ -12,6 +12,7 @@ const groups = [
     links: [
       { href: "/services", label: "Services" },
       { href: "/products", label: "Products" },
+      { href: "/platform", label: "Platform" },
       { href: "/capabilities", label: "Capabilities" }
     ]
   },
