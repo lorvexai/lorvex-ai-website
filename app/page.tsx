@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { getAllPosts } from "@/utils/posts";
+import RegulatoryMockup from "@/components/mockups/RegulatoryMockup";
+import NHSFlowMockup from "@/components/mockups/NHSFlowMockup";
+import TreasurySentinelMockup from "@/components/mockups/TreasurySentinelMockup";
 import {
   ArrowRight,
   ShieldCheck,
@@ -338,50 +341,12 @@ export default function HomePage() {
                   <Link href="/products" className="btn-outline text-sm">See Details</Link>
                 </div>
               </div>
-              <div className="glass rounded-2xl border border-blue-400/20 p-6">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="font-mono text-xs text-secondary/50">reg-intelligence · live</span>
-                  <span className="flex items-center gap-1.5 text-xs text-emerald-400"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />Running</span>
-                </div>
-                <div className="space-y-3">
-                  {[
-                    { label: "Obligations mapped",   value: "2,847", color: "text-blue-300"    },
-                    { label: "Controls linked",      value: "1,203", color: "text-primary"     },
-                    { label: "Evidence packages",    value: "94",    color: "text-violet-300"  },
-                    { label: "Audit readiness",      value: "98%",   color: "text-emerald-300" },
-                  ].map((row) => (
-                    <div key={row.label} className="flex items-center justify-between rounded-xl border border-secondary/10 bg-background/40 px-4 py-2.5">
-                      <span className="text-sm text-secondary/65">{row.label}</span>
-                      <span className={`font-mono text-sm font-bold ${row.color}`}>{row.value}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-center text-xs text-secondary/35">PRA · Basel 3.1 · FCA · ISO 42001</p>
-              </div>
+              <RegulatoryMockup />
             </div>
 
             {/* Product 2 */}
             <div className="grid items-center gap-8 md:grid-cols-2">
-              <div className="glass rounded-2xl border border-emerald-400/20 p-6 md:order-first">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="font-mono text-xs text-secondary/50">nhs-flow · live</span>
-                  <span className="flex items-center gap-1.5 text-xs text-emerald-400"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />Running</span>
-                </div>
-                <div className="space-y-3">
-                  {[
-                    { label: "Referrals triaged today", value: "342",  color: "text-emerald-300" },
-                    { label: "Avg triage time",         value: "4.2s", color: "text-primary"     },
-                    { label: "Pathway accuracy",        value: "94%",  color: "text-emerald-300" },
-                    { label: "Bed days saved (mo)",     value: "180",  color: "text-blue-300"    },
-                  ].map((row) => (
-                    <div key={row.label} className="flex items-center justify-between rounded-xl border border-secondary/10 bg-background/40 px-4 py-2.5">
-                      <span className="text-sm text-secondary/65">{row.label}</span>
-                      <span className={`font-mono text-sm font-bold ${row.color}`}>{row.value}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-center text-xs text-secondary/35">NHS Digital · IG Toolkit · Clinical Safety DCB0129</p>
-              </div>
+              <div className="md:order-first"><NHSFlowMockup /></div>
               <div>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-emerald-300">NHS &amp; Healthcare</span>
                 <h3 className="mt-4 text-2xl font-semibold text-white">NHS Flow Optimizer</h3>
@@ -420,26 +385,7 @@ export default function HomePage() {
                   <Link href="/products" className="btn-outline text-sm">See Details</Link>
                 </div>
               </div>
-              <div className="glass rounded-2xl border border-orange-400/20 p-6">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="font-mono text-xs text-secondary/50">treasury-sentinel · live</span>
-                  <span className="flex items-center gap-1.5 text-xs text-emerald-400"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />Running</span>
-                </div>
-                <div className="space-y-3">
-                  {[
-                    { label: "Positions monitored",  value: "1,240",  color: "text-orange-300"  },
-                    { label: "Anomalies flagged",     value: "3",      color: "text-red-300"     },
-                    { label: "LCR current",           value: "142%",   color: "text-emerald-300" },
-                    { label: "ALCO reports ready",    value: "7",      color: "text-primary"     },
-                  ].map((row) => (
-                    <div key={row.label} className="flex items-center justify-between rounded-xl border border-secondary/10 bg-background/40 px-4 py-2.5">
-                      <span className="text-sm text-secondary/65">{row.label}</span>
-                      <span className={`font-mono text-sm font-bold ${row.color}`}>{row.value}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-center text-xs text-secondary/35">PRA · Basel LCR/NSFR · ALCO · ILAAP</p>
-              </div>
+              <TreasurySentinelMockup />
             </div>
           </div>
 
