@@ -19,6 +19,7 @@ const groups = [
     label: "Insights",
     links: [
       { href: "/blog", label: "Blog" },
+      { href: "/models", label: "Model Garden" },
       { href: "/research", label: "Research" }
     ]
   },
