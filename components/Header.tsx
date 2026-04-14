@@ -139,8 +139,8 @@ export default function Header() {
             })}
           </nav>
 
-          <Link href="/contact" className="btn-outline min-h-11 text-sm">
-            Start a Project
+          <Link href="/contact#form" className="btn-outline min-h-11 text-sm">
+            Book a Call
           </Link>
         </div>
 

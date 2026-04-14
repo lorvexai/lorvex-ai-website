@@ -21,10 +21,10 @@ const contactMethods = [
   },
   {
     icon: CalendarCheck,
-    title: "Book a Strategy Call",
+    title: "Book a Call",
     detail: "30-minute discovery session",
     sub: "No commitment, just clarity",
-    href: "/contact#form"
+    href: "#form"
   }
 ];
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
           <div className="grid gap-10 md:grid-cols-[1.4fr_0.6fr]">
             <div className="glass rounded-2xl border border-secondary/20 p-8">
               <p className="mb-1 font-mono text-xs uppercase tracking-[0.28em] text-primary">Contact Form</p>
-              <h2 className="mb-6 text-2xl font-semibold text-white">Send us a message</h2>
+              <h2 className="mb-6 text-2xl font-semibold text-white">Book a call</h2>
               <ContactForm />
             </div>
 

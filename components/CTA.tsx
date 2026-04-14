@@ -45,7 +45,7 @@ export default function CTA() {
             className="btn-shimmer inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold text-white shadow-glow transition hover:brightness-110"
           >
             <CalendarCheck size={16} aria-hidden="true" />
-            Book a Strategy Call
+            Book a Call
             <ArrowRight size={16} aria-hidden="true" />
           </Link>
           <Link href="/services" className="btn-outline min-h-11 text-sm">
